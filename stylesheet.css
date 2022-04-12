@@ -1,271 +1,1027 @@
-* {
-  box-sizing: border-box;
-}
+@charset "utf-8";
+/* CSS Document */
 
-body {
-  margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN";
-}
+/* 2022/3/7 */
+/* 2022/1/25 */
+/* 2021/12/28 */
 
-a {
-  text-decoration: none;
-}
-
-.container {
+/* index TOP ブランドTOP
+------------------------------*/
+.main_slide .swiper-container {
   width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
+  /*height: 480px;*/
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.top-wrapper {
-  padding: 180px 0 100px 0;
-  background-image: url(top.png);
-  background-size: cover;
-  color: white;
+.main_slide .swiper-slide {
+  padding-top: 0px;
   text-align: center;
-}
+  color: #fff;
+  font-size: 30px;
+}/**/
 
-.top-wrapper h1 {
-  opacity: 0.7;
-  font-size: 45px;
-  letter-spacing: 5px;
-}
+@media (max-width: 768px) {
 
-.top-wrapper p {
-  opacity: 0.7;
-  font-size: 16px;
-  margin-bottom: 40px;
-}
-
-.btn-wrapper {
-  text-align: center;
-}
-
-.btn-wrapper p {
+.main_slide .swiper-container {
+  width: 100%;
+  height: auto;
   margin-bottom: 20px;
 }
-
-.signup {
-  background-color: #239b76;
 }
 
-.facebook {
-  background-color: #3b5998;
-  margin-right: 10px;
+.img-center img{
+  border-radius: 15px;
+  border: solid 1px #d5b04a;
 }
 
-.twitter {
-  background-color: #55acee;
+
+/* 注意書き */
+.red{
+  color: #cf152d!important;
+}
+h2.top_h2{
+  font-size: 22px;
+  color: #231815;
 }
 
-.btn {
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.btn:hover {
-  opacity: 1;
-}
-
-.fa {
-  margin-right: 5px;
-}
-
-header {
-  height: 65px;
-  width: 100%;
-  background-color: rgba(34,49,52,0.9);
-  position :fixed;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  width: 124px;
-  margin-top: 20px;
-}
-
-.header-left {
-  float: left;
-}
-
-.header-right {
-  float: right;
-  margin-right: -25px;
-}
-
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
+/* デバイス別 表示・非表示 */
+.pc_only{
   display: block;
-  float: left;
-  transition: all 0.5s;
+}
+.sp_only{
+  display: none;
+}
+@media (max-width: 767px) {
+.pc_only{
+  display: none;
+}
+.sp_only{
+  display: block;
+}
 }
 
-.header-right a:hover {
-  background-color: rgba(255,255,255,0.3);
-}
-
-.lesson-wrapper {
-  height: 580px;
-  padding-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #f7f7f7;
+/* gift_selection ギフトバナー */
+.gift_selection{
   text-align: center;
 }
-
-.heading {
-  padding-top: 80px;
-  padding-bottom: 50px;
-  color: #5f5d60;
+.gift_selection h1{
+  background-image: linear-gradient(145deg, #d4b678, #d6b779, #a57e4b );
+  padding: .3rem 0;
+  margin-bottom: 1rem;
+  color:#231815;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 20px;
 }
-
-.heading h2 {
-  font-weight: normal;
-}
-
-.lesson {
-  float: left;
-  width: 25%;
-}
-
-.lesson-icon {
+.gift_selection__bnr{
+  margin-bottom: 20px;
   position: relative;
 }
+.pagers{
+  text-align: center;
+}
+.pagers .swiper-pagination{
+  position: static!important;
+}
+.pagers .swiper-pagination-bullet{
+  margin: 0 3px;
+}
 
-.lesson-icon p {
-  position: absolute;
-  top: 37%;
+/* キャンペーンバナー */
+ul.camp_list{
   width: 100%;
-  color: white;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
-.text-contents {
-  width: 80%;
-  display: inline-block;
-  margin-top: 15px;
-  font-size: 13px;
-  color: #b3aeb5;
-}
-
-.heading h3 {
-  font-weight: normal;
-}
-
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
-}
-
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0px 7px #1a7940;
-}
-
-.message:active {
+ul.camp_list li{
+  width: calc(100% / 4);
+  min-height: 200px;
+  margin-bottom: 10px;
+  padding: 10px 8px 10px;
   position: relative;
-  top: 7px;
-  box-shadow: none;
 }
 
-footer img {
-  width: 125px;
+ul.camp_list li:first-child{
+  width: calc((100% - 26px) / 4);
+  min-height: 200px;
+  margin-bottom: 10px;
+  padding: 10px 8px 10px 0;
+  position: relative;
+}
+ul.camp_list li:last-child{
+  width: calc((100% - 26px) / 4);
+  min-height: 200px;
+  margin-bottom: 10px;
+  padding: 10px 0 10px 8px;
+  position: relative;
 }
 
-footer p {
-  color: #b3aeb5;
-  font-size: 12px;
+ul.camp_list li a:hover{
+  text-decoration: none!important;
 }
 
-footer {
-  padding-top: 30px;
-  padding-bottom: 20px;
+ul.camp_list li h2{
+  color:#231815;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+  padding: .5rem .5rem 0;
 }
 
-.menu-icon {
-  color: white;
-  float: right;
-  font-size: 25px;
-  padding: 21px 0;
+/* ワイド キャンペーン */
+.camp_list__W{
+  padding:0;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.block-top-trend--listsp {
   display: none;
 }
 
-.clear {
-  clear: left;
+@media (max-width: 767px) {
+ul.camp_list{
+  width: 100%;
+  margin: 20px auto 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-bottom: 1px solid #f5efe4;
+}
+ul.camp_list li{
+    width: calc((100% - 10px) / 2);
+    min-height: 150px;
+    margin-bottom: 10px;
+    padding: 0px 4px 8px;
+    position: relative;
 }
 
-@media all and (max-width: 1000px) {
-  .lesson {
-    width: 50%;
-    margin-bottom: 50px;
-  }
+ul.camp_list li:first-child{
+    width: calc((100% - 10px) / 2);
+    min-height: 150px;
+    margin-bottom: 10px;
+    padding: 0px 4px 8px;
+    position: relative;
+}
+ul.camp_list li:last-child{
+    width: calc((100% - 10px) / 2);
+    min-height: 150px;
+    margin-bottom: 10px;
+    padding: 0px 4px 8px;
+    position: relative;
+}
+.camp_list__W{
+  margin-bottom: 1em;
+}
+.gift_selection__bnr{
+  display: none;
+}
+.block-top-trend--listsp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 3%;
+}
+.block-top-trend--listsp .swiper-slide {
+  width: 48%;
+  margin-top: 1em;
+}
+}
 
-  .lesson-wrapper {
-    height: 990px;
-  }
+@media (max-width: 375px) {
+.block-top-trend--listsp .swiper-slide h2 {
+  font-size: 10px;
+  padding-top: 0.3em;
+}
+}
 
-  footer {
+/* SNS＋Google検索 */
+.sns-search_list{
+    width: calc(100% - 30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 2em;
+}
+.sns-search_list img{
+  padding: 0 0 0  30px;
+  vertical-align: middle;
+}
+@media (max-width: 640px) {
+.sns-search_list{
+    width: 100%;
+    margin: 10px auto 1em;
+    justify-content: center;
+}
+.sns-search_list img{
+  padding: 0 5px 0;
+}
+}
+@media (max-width: 375px) {
+  .sns-search_list {
+    flex-wrap: wrap;
+  }
+  .sns-search_list form {
+    width: 100%;
+  }
+}
+
+/* Google検索 */
+dl.search_google{
+  position:relative;
+}
+dl.search_google dt{
+  margin-right:105px;
+  padding:0px;
+  background-color:#fff;
+  border:1px solid #aaa;
+}
+dl.search_google dt input{
+  width:100%;
+  /*height:24px;*/
+  line-height:24px;
+  background:none;
+  border:none;
+}
+dl.search_google dd{
+  position:absolute;
+  top:0;
+  right:0;
+}
+dl.search_google dd button{
+  display:block;
+  width:100px;
+  color:#231815;
+  height:35px;
+  text-align:center;
+  background-color:#d5b04a;
+  border:1px solid #f5efe4;
+}
+@media (max-width: 640px) {
+dl.search_google dt{
+  margin-right: 65px;
+    margin-left: 5px;
+}
+dl.search_google dd button{
+  width:60px;
+  height:35px;
+}
+}
+@media (max-width: 375px) {
+  dl.search_google {
+    width: 100%;
+    margin-bottom: 0.5em;
+    padding: 0 3%;
+  }
+  dl.search_google dd {
+    right: 3%;
+  }
+  dl.search_google dd button{
+    font-size: 12px;
+    right: 3%;
+  }
+}
+
+/* .block-header-logo */
+.block-header-logo {
+    width: 130px;
+    font-size: 0;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* .brand .block-headernav--item-list li:first-child {
+  top: 28px;
+} */
+@media (max-width: 1199px){
+.block-header-logo {
+    width: 20.33%;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 90px;
+}
+.block-headernav--item-list li img {
+    max-width: 22px;
+}
+}
+
+/* .pane-header .container */
+/* .pane-header .container{
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    height: 120px;
+    margin: 0 auto;
+    justify-content: flex-end;
+    position: relative;
+} */
+
+/* バナーエリア */
+.block-top--banner{
+  margin: 0 12px 1em;
+}
+
+/* カルーセル */
+.block-top-trend--list{
+  width: 100%!important;
+}
+.block-top-trend--list h2, .swiper-slide h2{
+  color:#231815;
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+  padding-top: .5rem;
+}
+
+.block-top-trend--list a:hover{
+  text-decoration: none!important;
+}
+
+/* トレンド_ギフトコレクション キャンペーン */
+.block-top-trend {
+  margin: 0 auto;
+  max-width: 1200px!important;
+  width: auto;
+}
+.block-top-trend--box{
+  margin: 0 15px;
+}
+@media (max-width: 767px) {
+  .block-top-trend--box{
+  margin: 0 0;
+}
+}
+
+/* h2 ニュース＆トピックス 店舗 コレクション */
+@media (max-width: 767px) {
+.block-top-news h2, .block-top-item h2,
+.block-top-info h2,.block-top-about h2 {
+  padding-top: 45px!important;
+  padding-bottom: 45px!important;
+}
+.block-top-news h2:after, .block-top-item h2:after,
+.block-top-info h2:after,.block-top-about h2:after {
+    bottom: 25px!important;
+}
+}
+
+/* ニュース＆トピックス */
+.block-top-news--box dl{
+  padding: 0 16px;
+}
+.block-top-news--box {
+    margin: 0 auto;
+    padding-bottom: 0!important;
+}
+.block-top-event--btn{
+  margin-top: 2em!important;
+}
+.block-top-event--btn a {
+    text-decoration: none;
+}
+
+/* 店舗 */
+.block-top-info--list {
+    padding-top: 0!important;
+}
+.block-top-info h2 {
     text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    padding-top: 65px;
+    padding-bottom: 95px;
+    font-weight: bold;
+    background: none;
+}
+.block-top-info h2:after {
+    background-color: #d5af4a;
+    content: '　';
+    width: 40px;
+    height: 3px;
+    position: absolute;
+    bottom: 65px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* ニュース＆トピックス */
+@media (max-width: 767px) {
+.block-top-event--btn a {
+    margin: 0 auto 30px;
+}
+}
+
+
+/* コレクション */
+.block-top-item--list{
+  width: 100%;
+  margin: 0 auto;
+  display:flex;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+.block-top-item--list li{
+  margin:12px;
+}
+
+/*ゴディバについて　4カードの時*/
+.block-top-about--list {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* justify-content: space-between; */
+    text-align: center;
+    padding-bottom: 6em;
+    flex-wrap: wrap;
+}
+
+.block-top-about--list li {
+    font-weight: bold;
+    width: calc(100% / 4);
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 10px 8px 10px;
+    position: relative;
+}
+
+
+/*ゴディバについて　6カードの時*/
+
+ /*.block-top-about--list {
+    display: flex;
+    max-width: 905px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 6em;
+    flex-wrap: wrap;
+}
+
+.block-top-about--list li {
+    font-weight: bold;
+    width: calc(100% / 3);
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 10px 8px 10px;
+    position: relative;
+}*/
+
+
+
+@media screen and (min-width:768px) and ( max-width:1024px) {
+ul.block-top-info--list li{
+    width: calc(100% / 4);
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 10px 8px 10px;
+    position: relative;
+}
+
+ul.block-top-about--list li {
+    width: calc(100% / 3);
+    min-height: 200px;
+    margin-bottom: 10px;
+    padding: 10px 8px 10px;
+    position: relative;
+}
+}
+
+@media (max-width: 767px) {
+.block-top-item--box{
+  padding: 0 12px;
+}
+.block-top-item {
+    padding-bottom: 3em;
+}
+.block-top-item--list{
+  width: 100%;
+  margin: 0 auto;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap: wrap;
+}
+
+.block-top-item--list li {
+    width: calc((100% - 10px) / 2);
+    height: auto;
+    position: relative;
+    margin: 0;
+}
+.block-top-item--list span {
+    position: absolute;
+    left: 50%;
+    bottom: 1.5em;
+    transform: translateX(-50%);
+    width: 100%;
+    font-size: .9em;
+}
+}
+
+
+/* 店舗 ゴディバについて*/
+@media (max-width: 767px) {
+.block-top-info--list, .block-top-about--list {
+    padding-top: 0em;
+    padding-bottom: 3em;
+}
+ul.block-top-info--list, ul.block-top-about--list{
+  width: 100%;
+  margin: 10px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+ul.block-top-info--list li, ul.block-top-about--list li {
+    width: calc((100% - 10px) / 2);
+    height: auto;
+    position: relative;
+    margin-bottom: 0;
+    padding: .5rem;
+}
+}
+
+/*ゴディバについて　横長画像*/
+ul.block-top-about--list li.w2{
+  width: 98%;
+    margin: auto;
+}
+@media screen and (min-width:768px) and ( max-width:1024px) {
+ul.block-top-about--list li.w2{
+  width: 58%;
+    margin: auto;
+}
+}
+
+
+
+@media screen and (min-width: 801px){
+  /* swiperが動いてないとき */
+  #swiper-outer.noSwiper .swiper-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  #swiper-outer.noSwiper .swiper-slide{
+    flex: 0 0 32%;
+    max-width: 32%;
+    margin-right: 2%;
+  }
+  #swiper-outer.noSwiper .swiper-slide:last-child{
+    margin-right: 0;
+  }
+
+  /* swiperが動いているとき */
+  #swiper-outer.hasSwiper .swiper-slide{
+    width: 320px;
   }
 }
 
-@media all and (max-width: 750px) {
-  .top-wrapper h1 {
-    font-size: 32px;
-  }
-
-  .heading h2 {
-    font-size: 20px;
+@media screen and (max-width: 800px) {
+  #swiper-outer .swiper-slide {
+    width: 320px;
   }
 }
 
-@media all and (max-width: 670px) {
-  .header-right {
-    display: none;
-  }
+/* 2020/12/28 */
+.top_youtube_01{
+  padding: 20px 30px;
+  margin: auto;
+  width: 100%; 
+  background: #f5efe4; 
+}
+.top_youtube_01 .youtube_wrap{
+margin: auto;
+  width: 40%;
+  padding-bottom: 20px;
+}
+.top_youtube_01 .youtube_wrap .youtube{
+   position: relative;
+     padding-bottom: 56.25%;
+     height: 0;
+     overflow: hidden;
+}
 
-  .menu-icon {
+.top_youtube_01 .youtube_wrap .youtube iframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+}
+@media ( max-width:767px) {
+  .top_youtube_01{
+  padding: 20px 10px; 
+}
+
+.top_youtube_01 .youtube_wrap{
+margin: auto;
+  width: 95%;   
+}
+}
+
+
+/*2021/1/10*/
+.article {
+    width: auto;
+    border-top: solid 1px #411e1b;
+}
+
+.article .article--inner {
+    margin: 0 auto;
+    max-width: 1200px!important;
+    height: 100%;
+    padding: 1rem;
+    background-color: #fff;
+}
+.article .article--head h3.title {
+    font-family: "Roboto",sans-serif;
+    font-size: .85714rem;
+    letter-spacing: 0em;
+    line-height: 1em;
+     color: #411e1b;
+    text-align: center;
+}
+
+.article .article--body.pss--body {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0rem 2rem 2rem;
+}
+
+.pss--body__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+}
+
+.pss--description, .pss--hero {
+    width: calc(50% - 1rem);
+}
+
+.pss--hero {
+    width: calc(50% - 1rem);
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-left: 1rem;
+}
+
+.pss--description {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 1.3rem 2.3rem 0 1.3rem;
+}
+
+.pss--description h4 {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    letter-spacing: .04em;
+    line-height: 1em;
+     color: #411e1b;
+}
+
+.pss--description>p {
+    font-size: .92857rem;
+    letter-spacing: 0em;
+    line-height: 1.84615em;
+    padding: 1em 0;
+}
+
+.pss--buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+.pss--buttons_inner {
+    width: calc(50% - 0.5rem);
+}
+
+.pss--buttons_inner a {
     display: block;
-  }
+    border-radius: 1.71429rem;
+    height: 2.57143rem;
+    border: 1px solid #411e1b;
+    color: #411e1b;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 0em;
+    line-height: 2.57143em;
+    -webkit-transition: 0.65s cubic-bezier(0.77, 0, 0.175, 1) all;
+    -o-transition: 0.65s cubic-bezier(0.77, 0, 0.175, 1) all;
+    transition: 0.65s cubic-bezier(0.77, 0, 0.175, 1) all;
+    opacity: 1;
+    text-decoration: none;
+    min-width: 240px;
+}
+.pss--buttons_inner a:hover{
+  text-decoration: none;
+  background: rgba(65, 30, 27, .3);
+}
 
-  .top-wrapper .btn {
+.pss--buttons_inner a::after {
+    display: inline-block;
+    content: "";
+    background: url(../img/top/yajirushi.png) no-repeat;
+    width: 0.8rem;
+    height: 40%;
+    font-family: "Roboto", sans-serif;
+    vertical-align: middle;
+    margin-left: 0.3rem;
+    background-size: contain;
+}
+
+@media only screen and (max-width: 768px){
+.pss--description>p br{
+  display: none;
+}
+}
+@media only screen and (max-width: 767px){
+.article .article--body.pss--body {
+    padding: 0rem 0rem 1rem;
+}
+.pss--body__inner {
+    display: block;
+}
+.pss--description h4 {
+  text-align: center;
+}
+.pss--description, .pss--hero {
     width: 100%;
-  }
-
-  .twitter {
-    margin-top: 10px;
-  }
-
-  .top-wrapper {
-    text-align: left;
-  }
-
-  .top-wrapper h1 {
-    font-size: 24px;
-  }
-
-  .top-wrapper p {
-    font-size: 14px;
-  }
-
-  .lesson {
+    margin: 0;
+}
+.pss--buttons {
+    justify-content: center;
+}
+.pss--buttons_inner {
     width: 100%;
-  }
+}
 
-  .lesson-wrapper {
-    height: 1700px;
-  }
+}
 
-  .message-wrapper .btn {
+/*20210203 Youtube Title*/
+.top_youtube_01 h3.service_title{
+    padding: 1em 1em .5em;
+    color: #411e1b;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: .5em;
+    border-bottom: solid 1px #f5efe4;
+}
+.top_youtube_01 p.service_title{
+  color: #411e1b;
+  margin-bottom: 1em;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px){
+.top_youtube_01 h3.service_title{
+    padding: 1em 1em .5em;
+    color: #411e1b;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: .5em;
+    border-bottom: solid 1px #f5efe4;
+}
+
+}
+
+/* 2021/02/03 新しいオンラインサービス */
+.top_online_service{
+  background-color: #fff;
+  border-top: solid 1px #ccc;
+  padding: 30px 0;
+}
+.online_servic_title{
+
+}
+.online_servic_title h3{
+  font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0em;
+    line-height: 1em;
+     color: #411e1b;
+    text-align: center;
+}
+
+.online_service__inner{
+  display: flex;
+  justify-content: center;
+  max-width: 1080px;
+  margin: auto;
+}
+
+.online_service__inner .online_service__item{
+  width: calc(50% - 10px);
+  padding: 10px;
+}
+
+.online_service__inner .online_service__item h4{
+  text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.online_service__inner .online_service__item p{
+ text-align: center;
+ font-size: 14px;
+}
+.online_service__inner .online_service__item>p br{
+  display: block;
+}
+
+.online_service__inner .online_service__item .pss--buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+.online_service__inner .online_service__item .pss--buttons_inner {
+    width: 50%;
+    margin: 10px auto;
+}
+
+@media only screen and (max-width: 768px){
+.online_service__inner .online_service__item>p br{
+  display: none;
+}
+.online_service__inner .online_service__item .pss--buttons_inner {
+    width: 90%;
+    margin: 10px auto;
+}
+}
+@media only screen and (max-width: 767px){
+
+  .online_service__inner{
+  display: block;
+}
+
+.online_service__inner .online_service__item{
+  width: 100%;
+  padding: 10px;
+}
+
+.online_service__inner .online_service__item h4{
+  text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px;
+}
+
   }
+
+
+/* 2021/11/25 */
+.online_service__inner .online_service__item .pss--buttons_inner_red {
+    width: 50%;
+    margin: 10px auto;
+}
+
+@media only screen and (max-width: 768px){
+.online_service__inner .online_service__item .pss--buttons_inner_red {
+    width: 90%;
+    margin: 10px auto;
+}
+}
+
+.pss--buttons_inner_red a {
+    display: block;
+    border-radius: 1.71429rem;
+    height: 2.57143rem;
+    background: #e71a19;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 0em;
+    line-height: 2.57143em;
+    -webkit-transition: 0.65s cubic-bezier(0.77, 0, 0.175, 1) all;
+    -o-transition: 0.65s cubic-bezier(0.77, 0, 0.175, 1) all;
+    transition: 0.65s cubic-bezier(0.77, 0, 0.175, 1) all;
+    opacity: 1;
+    text-decoration: none;
+    min-width: 240px;
+}
+.pss--buttons_inner_red a:hover{
+  text-decoration: none;
+  background: rgba(231, 26, 25, .7);
+}
+
+/* 2021/12/28 */
+.flex_box{
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 767px){
+  .flex_box{
+  display: block;
+  justify-content: center;
+}
+  }
+
+
+/* 2022/1/25 ご縁プロジェクト*/
+.top_goen{
+   padding-bottom:20px;
+}
+
+.top_goen .goen_inner{
+  max-width:980px;
+  margin:auto;
+  padding:20px 0 0;
+  text-align: center;
+}
+
+.top_goen .goen_inner img.title{
+  padding:10px 10px 0;
+  max-width:460px;
+}
+
+.top_goen .goen_inner img.logo{
+  /*width:120px;*/
+  max-width: 50%;
+}
+
+.top_goen .pss--buttons{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 480px){
+  .top_goen .goen_inner img.title{
+  max-width:100%;
+}
+
+.top_goen .goen_inner img.logo{
+  max-width:75%;
+}
+}
+
+/* 2022/3/7 */
+/*--------------------------------------------------------------
+block-top-corporate コーポレートページバナー
+--------------------------------------------------------------*/
+.block-top-corporate{
+  max-width: 550px;
+  margin: auto;
+  padding: 1% 5% 3%;
+  text-align: center;
+}
+
+.block-top-corporate p{
+  font-size: 14px;
+  color: #5e3518;
+  padding-top: 10px;
+}
+
+.block-top-corporate a p{
+  color: #5e3518;
+}
+
+@media screen and (max-width:480px){
+.block-top-corporate{
+  padding: 2% 5% 0%;
+}
 }
